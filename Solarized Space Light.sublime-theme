@@ -473,7 +473,7 @@
     {
         "class": "sidebar_heading",
         "color": [105, 109, 118],
-        "shadow_color": [214, 129, 60, 35],
+        "shadow_color": [105, 109, 118, 35],
         "shadow_offset": [0, 1],
         "font.bold": true
     },
