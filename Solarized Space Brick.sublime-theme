@@ -459,7 +459,7 @@
     {
         "class": "tree_row",
         "layer0.texture": "",
-        "layer0.tint": [222, 216, 210],
+        "layer0.tint": [194, 83, 78],
         "layer0.opacity": 0,
         "layer0.inner_margin": [1,1]
     },
@@ -510,7 +510,7 @@
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row","attributes": ["selected"]}],
-        "color": [81, 95, 106]
+        "color": [239, 241, 245]
     },
 
 //
@@ -688,26 +688,26 @@
     {
         "class": "quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": [222, 216, 210, 255]
+        "layer0.tint": [194, 83, 78, 255]
     },
     {
         "class": "quick_panel_label",
         "fg": [101, 115, 126, 255],
         "match_fg": [214, 129, 60, 255],
-        "selected_fg": [61, 75, 86, 255],
-        "selected_match_fg": [214, 129, 60, 255]
+        "selected_fg": [239, 241, 245, 255],
+        "selected_match_fg": [244, 159, 90, 255]
     },
     {
         "class": "quick_panel_path_label",
-        "fg": [169, 175, 187, 255],
+        "fg": [167, 173, 186, 255],
         "match_fg": [140, 145, 156],
-        "selected_fg": [101, 115, 126],
-        "selected_match_fg": [71, 85, 96, 255]
+        "selected_fg": [206, 205, 202],
+        "selected_match_fg": [226, 225, 222, 255]
     },
     {
         "class": "quick_panel_score_label",
-        "fg": [169, 175, 187, 255],
-        "selected_fg": [101, 115, 126]
+        "fg": [167, 173, 186, 255],
+        "selected_fg": [206, 205, 202]
     },
 
 //
@@ -723,7 +723,7 @@
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [222, 216, 210]
+        "layer0.tint": [194, 83, 78]
     },
 
 //
@@ -744,13 +744,13 @@
         "class": "auto_complete_label",
         "fg": [169, 175, 187, 255],
         "match_fg": [214, 129, 60, 255],
-        "selected_fg": [101, 115, 126, 255],
-        "selected_match_fg": [214, 129, 60, 255]
+        "selected_fg": [255, 255, 255, 255],
+        "selected_match_fg": [244, 159, 90, 255]
     },
     {
         "class": "table_row",
         "layer0.texture": "",
-        "layer0.tint": [222, 216, 210],
+        "layer0.tint": [194, 83, 78],
         "layer0.opacity": 0,
         "layer0.inner_margin": [3,1]
     },
