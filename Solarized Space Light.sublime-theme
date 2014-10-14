@@ -88,7 +88,7 @@
         "parents": [{"class": "tab_control"}],
         "attributes": ["hover"],
         "layer0.opacity": 1,
-        "layer0.tint": [191, 97, 106] // 08
+        "layer0.tint": [204, 119, 50] // 08
     },
     {
         "class": "tab_close_button",
@@ -116,7 +116,7 @@
         "layer0.texture": "Theme - Solarized Space/Solarized Space/close.png",
         "attributes": ["hover"],
         "layer0.opacity": 1,
-        "layer0.tint": [191, 97, 106] // 08
+        "layer0.tint": [204, 119, 50] // 08
     },
     {
         "class": "tab_close_button",
@@ -406,7 +406,7 @@
     // Tooltip content
     {
         "class": "tool_tip_label_control",
-        "color": [239,241,245] // 07
+        "color": [239, 241, 245] // 07
     },
 
 //
@@ -586,7 +586,7 @@
         "attributes": ["dirty"],
         "layer0.texture": "Theme - Solarized Space/Solarized Space/circle.png",
         "layer0.opacity": 1,
-        "layer0.tint": [208, 135, 112] // 09
+        "layer0.tint": [204, 119, 50] // 09
     },
     {
         "class": "close_button",
@@ -598,14 +598,14 @@
     {
         "class": "close_button",
         "attributes": ["hover"],
-        "layer0.tint": [191, 97, 106] // 08
+        "layer0.tint": [204, 119, 50] // 08
     },
     {
         "class": "close_button",
         "attributes": ["dirty", "hover"],
         "parents": [{"class": "tree_row","attributes": ["hover"]}],
         "layer0.texture": "Theme - Solarized Space/Solarized Space/close.png",
-        "layer0.tint": [191, 97, 106] // 08
+        "layer0.tint": [204, 119, 50] // 08
     },
 
 //
@@ -725,7 +725,7 @@
     },
     {
         "class": "quick_panel_row",
-        "layer0.tint": [210, 206, 202], // 06
+        "layer0.tint": [222, 216, 210], // 06
         "layer0.inner_margin": [2, 2, 2, 2],
         "layer0.opacity": 1
     },
@@ -760,7 +760,7 @@
 
     {
         "class": "mini_quick_panel_row",
-        "layer0.tint": [210, 206, 202], // 06
+        "layer0.tint": [222, 216, 210], // 06
         "layer0.opacity": 1
     },
     {
@@ -787,9 +787,9 @@
     {
         "class": "auto_complete_label",
         "fg": [169, 175, 187, 255], // 04
-        "match_fg": [79, 91, 102, 255], // 02
+        "match_fg": [204, 119, 50, 255], // 02
         "selected_fg": [101, 115, 126, 255], // 03
-        "selected_match_fg": [51, 61, 69, 255] // 01
+        "selected_match_fg": [204, 119, 50, 255] // 01
     },
     {
         "class": "table_row",
@@ -1013,16 +1013,6 @@
         "class": "icon_highlight",
         "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
         "layer0.tint": [204, 119, 50] // 01
-    },
-
-//
-// SIDEBAR FOLDER COLORING
-//
-    {
-        "class": "disclosure_button_control",
-        "settings": ["spacegray_color_expanded_folder"],
-        "attributes": ["expanded"],
-        "layer0.tint": [254, 204, 102] // 0A
     },
 
 //
