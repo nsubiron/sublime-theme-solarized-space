@@ -2,6 +2,4 @@
 *.png binary
 
 .gitattributes export-ignore
-generate.py export-ignore
-template.sublime-theme export-ignore
-themes.ini export-ignore
+tools export-ignore

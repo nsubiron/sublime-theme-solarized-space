@@ -345,14 +345,14 @@
         "class": "minimap_control",
         "settings": ["always_show_minimap_viewport"],
         "viewport_color": $Minimap,
-        "viewport_opacity": { "target": 0.18, "speed": 3.0, "interpolation": "smoothstep" }
+        "viewport_opacity": { "target": 0.2, "speed": 3.0, "interpolation": "smoothstep" }
     },
     {
         "class": "minimap_control",
         "attributes": ["hover"],
         "settings": ["always_show_minimap_viewport"],
         "viewport_color": $Minimap,
-        "viewport_opacity": { "target": 0.3, "speed": 3.0, "interpolation": "smoothstep" }
+        "viewport_opacity": { "target": 0.35, "speed": 3.0, "interpolation": "smoothstep" }
     },
     {
         "class": "minimap_control",
@@ -365,7 +365,7 @@
         "attributes": ["hover"],
         "settings": ["!always_show_minimap_viewport"],
         "viewport_color": $Minimap,
-        "viewport_opacity": { "target": 0.3, "speed": 5.0, "interpolation": "smoothstep" }
+        "viewport_opacity": { "target": 0.35, "speed": 5.0, "interpolation": "smoothstep" }
     },
 
 //
