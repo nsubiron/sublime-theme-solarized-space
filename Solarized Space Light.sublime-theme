@@ -512,6 +512,11 @@
         "parents": [{"class": "tree_row","attributes": ["selected"]}],
         "color": [81, 95, 106]
     },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row","attributes": ["selected", "hover"]}],
+        "color": [81, 95, 106]
+    },
 
 //
 // SIDEBAR - OPEN FILE ICONS
@@ -615,7 +620,7 @@
         "min_size": [64,0],
         "layer0.texture": "",
         "layer0.opacity": 1,
-        "layer0.tint": [195, 190, 185],
+        "layer0.tint": [196, 190, 185],
         "layer0.inner_margin": [8,8]
     },
     // Hover button state
@@ -623,14 +628,14 @@
         "class": "button_control",
         "attributes": ["hover"],
         "layer0.texture": "",
-        "layer0.tint": [195, 190, 185]
+        "layer0.tint": [196, 190, 185]
     },
     // Pressed button state
     {
         "class": "button_control",
         "attributes": ["pressed"],
         "layer0.texture": "",
-        "layer0.tint": [195, 190, 185]
+        "layer0.tint": [196, 190, 185]
     },
 //
 // TEXT INPUT FIELD
@@ -640,7 +645,7 @@
     {
         "class": "text_line_control",
         "layer0.texture": "",
-        "layer0.tint": [195, 190, 185],
+        "layer0.tint": [196, 190, 185],
         "layer0.opacity": 1,
         "content_margin": [5, 5, 5, 6]
     },
@@ -655,7 +660,7 @@
         "layer0.texture": "",
         "layer0.inner_margin": [2, 2, 2, 2],
         "layer0.opacity": 1.0,
-        "layer0.tint": [195, 190, 185],
+        "layer0.tint": [196, 190, 185],
         "content_margin": [2, 3, 2, 1]
     },
     // Quick panel background
@@ -675,7 +680,7 @@
     {
         "class": "quick_panel",
         "row_padding": 4,
-        "layer0.tint": [195, 190, 185],
+        "layer0.tint": [196, 190, 185],
         "layer0.opacity": 1,
         "dark_content": true
     },
@@ -688,7 +693,7 @@
     {
         "class": "quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": [222, 216, 210, 255]
+        "layer0.tint": [222, 216, 210]
     },
     {
         "class": "quick_panel_label",
@@ -699,14 +704,14 @@
     },
     {
         "class": "quick_panel_path_label",
-        "fg": [169, 175, 187, 255],
+        "fg": [167, 173, 186, 255],
         "match_fg": [140, 145, 156],
         "selected_fg": [101, 115, 126],
         "selected_match_fg": [71, 85, 96, 255]
     },
     {
         "class": "quick_panel_score_label",
-        "fg": [169, 175, 187, 255],
+        "fg": [167, 173, 186, 255],
         "selected_fg": [101, 115, 126]
     },
 
