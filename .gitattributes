@@ -2,4 +2,6 @@
 *.png binary
 
 .gitattributes export-ignore
+README.md export-ignore
+images export-ignore
 tools export-ignore
