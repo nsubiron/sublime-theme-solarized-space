@@ -474,7 +474,7 @@
         "class": "sidebar_heading",
         "color": $SideBarHeading,
         "shadow_color": $SideBarHeadingShadow,
-        "shadow_offset": [0, 1],
+        "shadow_offset": [0, 0.1],
         "font.bold": true
     },
     // Sidebar heading selected

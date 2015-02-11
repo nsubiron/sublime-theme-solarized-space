@@ -474,7 +474,7 @@
         "class": "sidebar_heading",
         "color": [95, 99, 108],
         "shadow_color": [105, 109, 118, 35],
-        "shadow_offset": [0, 1],
+        "shadow_offset": [0, 0.1],
         "font.bold": true
     },
     // Sidebar heading selected
