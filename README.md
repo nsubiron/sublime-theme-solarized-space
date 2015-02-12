@@ -29,10 +29,22 @@ Themes
 ### Solarized Space Dark
 
 ```json
-"theme": "Solarized Space Dark..sublime-theme",
+"theme": "Solarized Space Dark.sublime-theme",
 ```
 
 ![image](images/dark.png)
+
+### Related Options
+
+Try adding combinations of the following to your
+`User/Preferences.sublime-settings`
+
+```json
+"always_show_minimap_viewport": true,
+"bold_folder_labels": true,
+"enable_tab_scrolling": false,
+"overlay_scroll_bars": "enabled",
+```
 
 Color Schemes
 -------------
