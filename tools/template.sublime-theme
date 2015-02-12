@@ -233,7 +233,7 @@
     // Standard vertical scroll puck
     {
         "class": "puck_control",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/standard-puck-vertical.png",
+        "layer0.texture": $StandardScrollBarVerticalPuck,
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [0, 10],
         "content_margin": [8, 12],
@@ -243,7 +243,7 @@
     {
         "class": "puck_control",
         "attributes": ["horizontal"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/standard-puck-horizontal.png",
+        "layer0.texture": $StandardScrollBarHorizontalPuck,
         "layer0.inner_margin": [10, 0],
         "content_margin": [12, 8],
         "blur": false

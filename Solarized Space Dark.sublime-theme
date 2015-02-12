@@ -208,7 +208,7 @@
     {
         "class": "scroll_bar_control",
         "layer0.texture": "",
-        "layer0.tint": [229, 226, 219],
+        "layer0.tint": [26, 40, 49],
         "layer0.opacity": 1,
         "layer0.inner_margin": [0,0],
         "blur": true
@@ -218,7 +218,7 @@
         "class": "scroll_bar_control",
         "attributes": ["horizontal"],
         "layer0.texture": "",
-        "layer0.tint": [229, 226, 219],
+        "layer0.tint": [26, 40, 49],
         "layer0.inner_margin": [0,0],
         "blur": true
     },
@@ -226,14 +226,14 @@
     {
         "class": "scroll_corner_control",
         "layer0.texture": "",
-        "layer0.tint": [229, 226, 219],
+        "layer0.tint": [26, 40, 49],
         "layer0.inner_margin": [0,0],
         "layer0.opacity": 1
     },
     // Standard vertical scroll puck
     {
         "class": "puck_control",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/standard-puck-vertical.png",
+        "layer0.texture": "Theme - Solarized Space/Solarized Space/standard-puck-vertical-dark.png",
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [0, 10],
         "content_margin": [8, 12],
@@ -243,7 +243,7 @@
     {
         "class": "puck_control",
         "attributes": ["horizontal"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/standard-puck-horizontal.png",
+        "layer0.texture": "Theme - Solarized Space/Solarized Space/standard-puck-horizontal-dark.png",
         "layer0.inner_margin": [10, 0],
         "content_margin": [12, 8],
         "blur": false
