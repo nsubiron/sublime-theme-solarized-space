@@ -60,5 +60,5 @@ Solarized light with lighter cursor
 Solarized light for [MarkdownEditing](https://github.com/SublimeText-Markdown/MarkdownEditing)
 
 ```json
-"color_scheme": "Packages/Theme - Solarized Space/Solarized Vmd (Light).tmTheme",
+"color_scheme": "Packages/Theme - Solarized Space/Solarized V Markdown (Light).tmTheme",
 ```
