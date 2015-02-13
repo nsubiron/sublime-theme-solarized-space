@@ -7,6 +7,8 @@ Based on [Spacegray](https://kkga.github.io/spacegray/),
 [Sodarized](https://github.com/jrolfs/sodarized) and
 [Piatto](https://github.com/samuelrafo/piatto) among other.
 
+Tweaks and ideas are welcome :)
+
 Themes
 ------
 
