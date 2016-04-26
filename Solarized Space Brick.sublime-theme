@@ -20,45 +20,86 @@
     },
     {
         "class": "tabset_control",
-        "settings": ["mouse_wheel_switches_tabs"],
+        "settings": ["mouse_wheel_switches_tabs", "!enable_tab_scrolling"],
         "mouse_wheel_switch": true
     },
     // Tab element
+
+    // Tabs
     {
         "class": "tab_control",
-        "content_margin": [8,0],
-        "max_margin_trim": 0,
-        "hit_test_level": 0,
+
         "layer0.texture": "",
-        "layer0.tint": [223, 221, 217],
-        "layer0.inner_margin": [5,5],
-        "layer0.opacity": 1
+        "layer0.inner_margin": [22, 4],
+        "layer0.opacity": 0.5,
+        "tint_index": 0,        // tint layer 0
+        "tint_modifier": [255, 0, 0, 0],
+
+        "layer1.texture": "",
+        "layer1.inner_margin": [22, 4],
+        "layer1.opacity": 0.0,
+
+        "layer2.inner_margin": [22, 4],
+        "layer2.opacity": 0.0,
+
+        "content_margin": [24, 8, 23, 4],
+        "max_margin_trim": 6,
+        "hit_test_level": 0.4
     },
-    // Tab close state
+
+    // Tabs (file color overrides)
     {
-        "class": "tab_control",
-        "settings": ["show_tab_close_buttons"],
-        "content_margin": [8,0]
+        "class": "tab_control", "attributes": ["file_light"],
+        // "layer2.texture": "Theme - Default/light_unselected_tab_bg2.png",
+        // "layer0.tint": [223, 221, 217],
     },
-    // Tab hover state
     {
-        "class": "tab_control",
-        "attributes": ["hover"],
-        "layer0.texture": ""
+        "class": "tab_control", "attributes": ["file_medium"],
+        // "layer2.texture": "Theme - Default/medium_unselected_tab_bg.png",
+        // "layer2.opacity": 0.5
     },
-    // Tab active state
     {
-        "class": "tab_control",
-        "attributes": ["selected"],
-        "layer0.texture": "",
-        "layer0.tint": [253, 246, 227]
+        "class": "tab_control", "attributes": ["file_medium_dark"],
+        "tint_modifier": [255, 255, 255, 32],
+        // "layer2.texture": "Theme - Default/medium_dark_unselected_tab_bg2.png",
+        // "layer2.opacity": 1.0
     },
-    // Tab dirty state (close button hidden)
     {
-        "class": "tab_control",
-        "settings": ["!show_tab_close_buttons"],
-        "attributes": ["dirty"],
-        "content_margin": [12,3,7,3]
+        "class": "tab_control", "attributes": ["file_dark"],
+        "tint_modifier": [255, 255, 255, 230],
+        // "layer0.texture": "Theme - Default/dark_tab_mask3.png",
+        // "layer2.texture": "Theme - Default/dark_unselected_tab_bg2.png",
+        // "layer2.opacity": 1.0
+    },
+
+    // Selected Tabs
+    {
+        "class": "tab_control", "attributes": ["selected"],
+        // "layer0.texture": "Theme - Default/tab_mask_white.png",
+        "layer0.opacity": 1.0
+    },
+    {
+        "class": "tab_control", "attributes": ["selected", "file_light"],
+        // "layer2.texture": "Theme - Default/light_selected_tab_bg.png",
+        // "layer2.opacity": 0.8
+    },
+    {
+        "class": "tab_control", "attributes": ["selected", "file_medium"],
+        // "layer2.texture": "Theme - Default/medium_selected_tab_bg.png",
+        // "layer2.opacity": 0.5
+    },
+    {
+        "class": "tab_control", "attributes": ["selected", "file_medium_dark"],
+        "tint_modifier": [0, 0, 0, 0],
+        // "layer2.texture": "Theme - Default/medium_dark_selected_tab_bg.png",
+        // "layer2.opacity": 0.7
+    },
+    {
+        "class": "tab_control", "attributes": ["selected", "file_dark"],
+        "tint_modifier": [0, 0, 0, 0],
+        // "layer2.texture": "Theme - Default/dark_selected_tab_bg.png",
+        // "layer2.opacity": 1,
+        // "layer0.opacity": 1.0
     },
 
 //
@@ -68,7 +109,7 @@
     // Tab close button
     {
         "class": "tab_close_button",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/close.png",
+        "layer0.texture": "Theme - Solarized Space/resources/close.png",
         "layer0.opacity": 0,
         "layer0.tint": [167, 173, 186]
     },
@@ -80,7 +121,7 @@
     {
         "class": "tab_close_button",
         "parents": [{"class": "tab_control","attributes": ["hover"]}],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/close.png",
+        "layer0.texture": "Theme - Solarized Space/resources/close.png",
         "layer0.opacity": 1
     },
     {
@@ -99,7 +140,7 @@
     {
         "class": "tab_close_button",
         "parents": [{"class": "tab_control","attributes": ["dirty"]}],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/circle.png",
+        "layer0.texture": "Theme - Solarized Space/resources/circle.png",
         "layer0.tint": [214, 129, 60],
         "layer0.opacity": 1
     },
@@ -113,7 +154,7 @@
     {
         "class": "tab_close_button",
         "parents": [{"class": "tab_control","attributes": ["dirty","hover"]}],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/close.png",
+        "layer0.texture": "Theme - Solarized Space/resources/close.png",
         "attributes": ["hover"],
         "layer0.opacity": 1,
         "layer0.tint": [214, 129, 60]
@@ -151,22 +192,92 @@
 // TAB LABELS
 //
 
+    // Tab Labels
     {
         "class": "tab_label",
-        "fade": true,
-        "font.size": 11.0,
-        "fg": [95, 99, 108]
+        "fg": [0, 0, 0, 255],
+        "shadow_color": [255, 255, 255, 80],
+        "shadow_offset": [0, 1],
+        "font.italic": false
     },
     {
         "class": "tab_label",
-        "parents": [{"class": "tab_control","attributes": ["hover"]}],
-        "fg": [79, 91, 102]
+        "parents": [{"class": "tab_control", "attributes": ["file_medium"]}],
+        "fg": [255, 255, 255, 180],
+        "shadow_color": [0, 0, 0, 100],
+        "shadow_offset": [0, -1]
     },
     {
         "class": "tab_label",
-        "parents": [{"class": "tab_control","attributes": ["selected"]}],
-        "fg": [51, 61, 69]
+        "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+        "fg": [0, 0, 0, 255],
+        "shadow_color": [255, 255, 255, 50],
+        "shadow_offset": [0, 1]
     },
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["selected", "file_medium"]}],
+        "fg": [255, 255, 255, 255],
+        "shadow_color": [0, 0, 0, 100],
+        "shadow_offset": [0, -1]
+    },
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["file_medium_dark"]}],
+        "fg": [255, 255, 255, 140],
+        "shadow_color": [0, 0, 0, 100],
+        "shadow_offset": [0, -1]
+    },
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["selected", "file_medium_dark"]}],
+        "fg": [255, 255, 255, 230],
+        "shadow_color": [0, 0, 0, 255],
+        "shadow_offset": [0, -1]
+    },
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["file_dark"]}],
+        "fg": [255, 255, 255, 160],
+        "shadow_color": [0, 0, 0, 100],
+        "shadow_offset": [0, -1]
+    },
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["selected", "file_dark"]}],
+        "fg": [255, 255, 255, 230],
+        "shadow_color": [0, 0, 0, 255],
+        "shadow_offset": [0, -1]
+    },
+
+    // {
+    //     "class": "tab_label",
+    //     "parents": [{"class": "tab_control", "attributes": ["file_light"]}],
+    //     "attributes": ["dirty"],
+    //     "settings": ["highlight_modified_tabs"],
+    //     "fg": [255, 23, 0]
+    // },
+    // {
+    //     "class": "tab_label",
+    //     "parents": [{"class": "tab_control", "attributes": ["file_medium"]}],
+    //     "attributes": ["dirty"],
+    //     "settings": ["highlight_modified_tabs"],
+    //     "fg": [255, 23, 0]
+    // },
+    // {
+    //     "class": "tab_label",
+    //     "parents": [{"class": "tab_control", "attributes": ["file_medium_dark"]}],
+    //     "attributes": ["dirty"],
+    //     "settings": ["highlight_modified_tabs"],
+    //     "fg": [255, 161, 52]
+    // },
+    // {
+    //     "class": "tab_label",
+    //     "parents": [{"class": "tab_control", "attributes": ["file_dark"]}],
+    //     "attributes": ["dirty"],
+    //     "settings": ["highlight_modified_tabs"],
+    //     "fg": [255, 161, 52]
+    // },
     {
         "class": "tab_label",
         "attributes": ["transient"],
@@ -179,7 +290,7 @@
 
     {
         "class": "fold_button_control",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/folder-closed.png",
+        "layer0.texture": "Theme - Solarized Space/resources/folder-closed.png",
         "layer0.tint": [167, 173, 186],
         "layer0.opacity": 0.5,
         "layer0.inner_margin": 0,
@@ -193,7 +304,7 @@
     {
         "class": "fold_button_control",
         "attributes": ["expanded"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/folder-open.png"
+        "layer0.texture": "Theme - Solarized Space/resources/folder-open.png"
     },
     {
         "class": "fold_button_control",
@@ -209,7 +320,7 @@
         "class": "scroll_bar_control",
         "layer0.texture": "",
         "layer0.tint": [229, 226, 219],
-        "layer0.opacity": 1,
+        "layer0.opacity": 1.0,
         "layer0.inner_margin": [0,0],
         "blur": true
     },
@@ -233,19 +344,19 @@
     // Standard vertical scroll puck
     {
         "class": "puck_control",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/standard-puck-vertical.png",
+        "layer0.texture": "Theme - Solarized Space/resources/standard-puck-vertical.png",
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [0, 10],
-        "content_margin": [8, 12],
+        "content_margin": [5, 12],
         "blur": false
     },
     // Standard horizontal scroll puck
     {
         "class": "puck_control",
         "attributes": ["horizontal"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/standard-puck-horizontal.png",
+        "layer0.texture": "Theme - Solarized Space/resources/standard-puck-horizontal.png",
         "layer0.inner_margin": [10, 0],
-        "content_margin": [12, 8],
+        "content_margin": [12, 5],
         "blur": false
     },
 
@@ -253,7 +364,8 @@
 // OVERLAY SCROLLBARS
 //
 
-    // Overlay toggle scroll bar
+        // Overlay toggle scroll bar
+
     {
         "class": "scroll_area_control",
         "settings": ["overlay_scroll_bars"],
@@ -264,17 +376,22 @@
         "settings": ["!overlay_scroll_bars"],
         "overlay": false
     },
-    // Overlay vertical scroll bar
+
+        // Overlay vertical scroll bar
+
     {
         "class": "scroll_bar_control",
         "settings": ["overlay_scroll_bars"],
         "layer0.texture": "",
-        "layer0.tint": [192, 197, 206],
+        // @todo
+        // "layer0.tint": [192, 197, 206],
         "layer0.inner_margin": [0,5],
         "layer0.opacity": 0,
         "blur": false
     },
-    // Overlay horizontal scroll bar
+
+        // Overlay horizontal scroll bar
+
     {
         "class": "scroll_bar_control",
         "settings": ["overlay_scroll_bars"],
@@ -283,38 +400,28 @@
         "layer0.opacity": 0,
         "blur": true
     },
-    // Overlay vertical puck
+
+        // Overlay vertical puck
+
     {
         "class": "puck_control",
         "settings": ["overlay_scroll_bars"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/overlay-puck-vertical.png",
-        "layer0.inner_margin": [0,5],
-        "content_margin": [4,32],
-        "blur": true
+        "layer0.texture": "Theme - Solarized Space/resources/overlay-puck-vertical.png",
+        "layer0.inner_margin": [0, 5],
+        "content_margin": [5, 20],
+        "blur": false
     },
-    // Overlay horizontal puck
+
+        // Overlay horizontal puck
+
     {
         "class": "puck_control",
         "settings": ["overlay_scroll_bars"],
         "attributes": ["horizontal"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/overlay-puck-horizontal.png",
-        "layer0.inner_margin": [5,0],
-        "content_margin": [16,4],
-        "blur": true
-    },
-    // Overlay light puck (for dark content)
-    {
-        "class": "puck_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["dark"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/overlay-puck-vertical.png"
-    },
-    // Overlay light horizontal puck (for dark content)
-    {
-        "class": "puck_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["horizontal","dark"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/overlay-puck-horizontal.png"
+        "layer0.texture": "Theme - Solarized Space/resources/overlay-puck-horizontal.png",
+        "layer0.inner_margin": [5, 0],
+        "content_margin": [20, 5],
+        "blur": false
     },
 
 //
@@ -328,13 +435,32 @@
     },
 
 //
-// GRID LAYOUT
+// CONTROLS
 //
 
     {
         "class": "grid_layout_control",
         "border_size": 1,
-        "border_color": [253, 246, 227]
+        "border_color": [223, 221, 217]
+    },
+
+    {
+        "class": "progress_bar_control",
+        "layer0.tint": [32, 32, 32],
+        "layer0.opacity": 1.0,
+    },
+
+    {
+        "class": "progress_gauge_control",
+        "layer0.tint": [241, 130, 96],
+        "layer0.opacity": 1.0,
+        "content_margin": [0, 6]
+    },
+
+    {
+        "class": "dialog",
+        "layer0.tint": [223, 221, 217],
+        "layer0.opacity": 1.0
     },
 
 //
@@ -486,7 +612,7 @@
     // Sidebar entry
     {
         "class": "sidebar_label",
-        "font.size": 11.0,
+        // @todo "font.size": 11.0,
         "color": [95, 99, 108]
     },
     // Sidebar folder entry
@@ -525,7 +651,7 @@
     // Sidebar file close
     {
         "class": "close_button",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/close.png",
+        "layer0.texture": "Theme - Solarized Space/resources/close.png",
         "layer0.opacity": 0,
         "layer0.inner_margin": 0,
         "layer0.tint": [167, 173, 186],
@@ -545,7 +671,7 @@
     {
         "class": "close_button",
         "attributes": ["dirty"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/circle.png",
+        "layer0.texture": "Theme - Solarized Space/resources/circle.png",
         "layer0.opacity": 1,
         "layer0.tint": [214, 129, 60]
     },
@@ -553,7 +679,7 @@
         "class": "close_button",
         "attributes": ["dirty"],
         "parents": [{"class": "tree_row","attributes": ["selected"]}],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/circle.png"
+        "layer0.texture": "Theme - Solarized Space/resources/circle.png"
     },
     // Sidebar file close hover
     {
@@ -565,7 +691,7 @@
         "class": "close_button",
         "attributes": ["dirty", "hover"],
         "parents": [{"class": "tree_row","attributes": ["hover"]}],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/close.png",
+        "layer0.texture": "Theme - Solarized Space/resources/close.png",
         "layer0.tint": [214, 129, 60]
     },
 
@@ -577,7 +703,7 @@
     {
         "class": "disclosure_button_control",
         "content_margin": [8,8],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/folder-closed.png",
+        "layer0.texture": "Theme - Solarized Space/resources/folder-closed.png",
         "layer0.tint": [167, 173, 186],
         "layer0.opacity": 1,
         "layer0.inner_margin": 0
@@ -595,7 +721,7 @@
     {
         "class": "disclosure_button_control",
         "attributes": ["expanded"],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/folder-open.png"
+        "layer0.texture": "Theme - Solarized Space/resources/folder-open.png"
     },
     {
         "class": "disclosure_button_control",
@@ -606,7 +732,88 @@
         "class": "disclosure_button_control",
         "attributes": ["expanded"],
         "parents": [{"class": "tree_row","attributes": ["selected"]}],
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/folder-open.png"
+        "layer0.texture": "Theme - Solarized Space/resources/folder-open.png"
+    },
+
+//
+// FOLDER AND FILE ICONS
+//
+
+        // Hides Folder Icons if show_file_icons
+
+    {
+        "class": "disclosure_button_control",
+        "settings": ["show_file_icons"],
+        "content_margin": [0, 0],
+        "layer0.opacity": 0
+    },
+
+        // Replaces Default Folder Icons
+
+    {
+        "class": "icon_folder",
+        "settings": ["show_file_icons"],
+        "content_margin": [8, 8],
+        "layer0.texture": "Theme - Solarized Space/resources/folder-icon.png",
+        "layer0.opacity": 1.0
+    },
+        {
+        "class": "icon_folder",
+        "settings": ["show_file_icons"],
+        "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+        "layer0.texture": "Theme - Solarized Space/resources/folder_open-icon.png",
+        "layer0.opacity": 1.0
+    },
+
+        // Sidebar file icons
+
+    {
+        "class": "icon_file_type",
+        // layer0.texture is filled in by code with the relevant icon name
+        "settings": ["show_file_icons"],
+        "layer0.tint": [95, 99, 108],
+        "layer0.opacity": 0.6,
+        "content_margin": [8, 8]
+    },
+    {
+        "class": "icon_file_type",
+        "settings": ["show_file_icons"],
+        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+        "layer0.tint": [51, 61, 69],
+        "layer0.opacity": 0.6
+    },
+    {
+        "class": "icon_file_type",
+        "settings": ["show_file_icons"],
+        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "layer0.tint": [239, 241, 245],
+        "layer0.opacity": 0.9
+    },
+    {
+        "class": "icon_file_type",
+        "settings": ["show_file_icons"],
+        "parents": [{"class": "tree_row", "attributes": ["selected", "hover"]}],
+        "layer0.tint": [239, 241, 245],
+        "layer0.opacity": 0.9
+    },
+    {
+        "class": "icon_file_type",
+        "settings": ["!show_file_icons"],
+        "content_margin": [0,0],
+        "layer0.opacity": 0.0
+    },
+    {
+        "class": "icon_folder",
+        "settings": ["!show_file_icons"],
+        "layer0.texture": "",
+        "layer0.opacity": 0.0,
+        "content_margin": [0,0]
+    },
+    {
+        "class": "icon_folder_loading",
+        "settings": ["!show_file_icons"],
+        "content_margin": [0,0],
+        "layer0.opacity": 0.0
     },
 
 //
@@ -645,7 +852,7 @@
     {
         "class": "text_line_control",
         "layer0.texture": "",
-        "layer0.tint": [196, 190, 185],
+        "layer0.tint": [253, 246, 227],
         "layer0.opacity": 1,
         "content_margin": [5, 5, 5, 6]
     },
@@ -654,19 +861,30 @@
 // PANEL BACKGROUNDS
 //
 
-    // Bottom panel background
+        // Bottom panel background
     {
         "class": "panel_control",
         "layer0.texture": "",
         "layer0.inner_margin": [2, 2, 2, 2],
         "layer0.opacity": 1.0,
         "layer0.tint": [196, 190, 185],
-        "content_margin": [2, 3, 2, 1]
+        "content_margin": [0, 0, -5, 0]
     },
+        // Quick panel background
+    // {
+    //     "class": "overlay_control",
+    //     "layer0.texture": "Theme - Solarized Space/Predawn/overlay-bg-light.png",
+    //     "layer0.inner_margin": [30, 30],
+    //     "layer0.opacity": 1.0,
+    //     "layer1.texture": "Theme - Solarized Space/Predawn/quick-panel-background.png",
+    //     "layer1.inner_margin": [30, 0, 20, 20],
+    //     "layer1.opacity": 1.0,
+    //     "content_margin": [20, 6, 20, 26]
+    // },
     // Quick panel background
     {
         "class": "overlay_control",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/quick-panel-background-light.png",
+        "layer0.texture": "Theme - Solarized Space/resources/quick-panel-background-light.png",
         "layer0.inner_margin": [12, 0, 12, 12],
         "layer0.opacity": 1.0,
         "layer1.opacity": 0,
@@ -748,8 +966,10 @@
     {
         "class": "auto_complete_label",
         "fg": [169, 175, 187, 255],
+        "bg": [26, 26, 26],
         "match_fg": [214, 129, 60, 255],
         "selected_fg": [255, 255, 255, 255],
+        "selected_bg": [85, 85, 85],
         "selected_match_fg": [244, 159, 90, 255]
     },
     {
@@ -769,56 +989,67 @@
 // BOTTOM PANEL BUTTONS
 //
 
-    // Button group middle
+        // Button group middle
     {
         "class": "icon_button_control",
-        "layer1.texture": "",
-        "layer1.opacity": 0,
+        // "layer0.texture": "Theme - Solarized Space/Predawn/btn-group-middle.png",
+        "layer0.texture": "",
+        "layer0.tint": [196, 190, 185],
+        "layer0.opacity": 1,
         "content_margin": 7
     },
     {
         "class": "icon_button_control",
-        "attributes": ["selected"],
-        "layer0.opacity": 0
+        "settings": ["findreplace_small"],
+        "content_margin": 7
     },
-    // Button group left
+        // Button group left
     {
         "class": "icon_button_control",
         "attributes": ["left"],
-        "layer0.texture": ""
+        // "layer0.texture": "Theme - Solarized Space/Predawn/btn-group-left.png",
+        "layer0.texture": "",
+        "layer0.tint": [196, 190, 185],
+        "layer0.opacity": 1,
+        "content_margin": 7
     },
-    // Button group left
     {
         "class": "icon_button_control",
         "attributes": ["left"],
-        "layer0.texture": ""
+        "settings": ["findreplace_small"],
+        "content_margin": 7
     },
-    {
-        "class": "icon_button_control",
-        "attributes": ["left","selected"],
-        "layer0.texture": ""
-    },
-    // Button group right
+        // Button group right
     {
         "class": "icon_button_control",
         "attributes": ["right"],
-        "layer0.texture": ""
+        // "layer0.texture": "Theme - Solarized Space/Predawn/btn-group-right.png",
+        "layer0.texture": "",
+        "layer0.tint": [196, 190, 185],
+        "layer0.opacity": 1,
+        "content_margin": 7
     },
     {
         "class": "icon_button_control",
-        "attributes": ["right","selected"],
-        "layer0.texture": ""
+        "attributes": ["right"],
+        "settings": ["findreplace_small"],
+        "content_margin": 7
     },
-    // Button single
+        // Button single
     {
         "class": "icon_button_control",
-        "attributes": ["left","right"],
-        "layer0.texture": ""
+        "attributes": ["left", "right"],
+        // "layer0.texture": "Theme - Solarized Space/Predawn/btn-single.png",
+        "layer0.texture": "",
+        "layer0.tint": [196, 190, 185],
+        "layer0.opacity": 1,
+        "content_margin": 7
     },
     {
         "class": "icon_button_control",
-        "attributes": ["left","right","selected"],
-        "layer0.texture": ""
+        "attributes": ["left", "right"],
+        "settings": ["findreplace_small"],
+        "content_margin": [10, 4, 10, 5]
     },
 
 //
@@ -828,7 +1059,7 @@
     // Regex search button
     {
         "class": "icon_regex",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/regex.png",
+        "layer0.texture": "Theme - Solarized Space/resources/regex.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -842,7 +1073,7 @@
     // Case sensitive search button
     {
         "class": "icon_case",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/casesens.png",
+        "layer0.texture": "Theme - Solarized Space/resources/casesens.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -855,7 +1086,7 @@
     // Match whole word search button
     {
         "class": "icon_whole_word",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/wholeword.png",
+        "layer0.texture": "Theme - Solarized Space/resources/wholeword.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -873,7 +1104,7 @@
     // Show search context button
     {
         "class": "icon_context",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/context.png",
+        "layer0.texture": "Theme - Solarized Space/resources/context.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -886,7 +1117,7 @@
     // Use search buffer
     {
         "class": "icon_use_buffer",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/buffer.png",
+        "layer0.texture": "Theme - Solarized Space/resources/buffer.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -903,7 +1134,7 @@
     // Reverse search direction button (ST2 only)
     {
         "class": "icon_reverse",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/reverse.png",
+        "layer0.texture": "Theme - Solarized Space/resources/reverse.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -916,7 +1147,7 @@
     // Search wrap button
     {
         "class": "icon_wrap",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/wrap.png",
+        "layer0.texture": "Theme - Solarized Space/resources/wrap.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -929,7 +1160,7 @@
     // Search in selection button
     {
         "class": "icon_in_selection",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/selection.png",
+        "layer0.texture": "Theme - Solarized Space/resources/selection.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -947,7 +1178,7 @@
     // Preserve case button
     {
         "class": "icon_preserve_case",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/lock.png",
+        "layer0.texture": "Theme - Solarized Space/resources/lock.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -965,7 +1196,7 @@
     // Highlight results button
     {
         "class": "icon_highlight",
-        "layer0.texture": "Theme - Solarized Space/Solarized Space/highlight.png",
+        "layer0.texture": "Theme - Solarized Space/resources/highlight.png",
         "layer0.tint": [89, 89, 89],
         "layer0.opacity": 1,
         "content_margin": 8
@@ -976,35 +1207,13 @@
         "layer0.tint": [214, 129, 60]
     },
 
-//
-// TABS SIZING
-//
+// //
+// // TABS SIZING
+// //
 
     // Tab set
     {
         "class": "tabset_control",
         "tab_width": 0 // auto
-    },
-
-//
-// FIX ICON BUG BY REMOVING THEM
-//
-
-    {
-        "class": "icon_file_type",
-        "content_margin": [0,0],
-        "layer0.opacity": 0.0
-    },
-    {
-        "class": "icon_folder",
-        "layer0.texture": "",
-        "layer0.opacity": 0.0,
-        "content_margin": [0,0]
-    },
-    {
-        "class": "icon_folder_loading",
-        "content_margin": [0,0],
-        "layer0.opacity": 0.0
     }
-
 ]
