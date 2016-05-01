@@ -994,7 +994,7 @@
         "class": "icon_button_control",
         // "layer0.texture": "Theme - Solarized Space/Predawn/btn-group-middle.png",
         "layer0.texture": "",
-        "layer0.tint": [196, 190, 185],
+        "layer0.tint": [22, 34, 41],
         "layer0.opacity": 1,
         "content_margin": 7
     },
@@ -1009,7 +1009,7 @@
         "attributes": ["left"],
         // "layer0.texture": "Theme - Solarized Space/Predawn/btn-group-left.png",
         "layer0.texture": "",
-        "layer0.tint": [196, 190, 185],
+        "layer0.tint": [22, 34, 41],
         "layer0.opacity": 1,
         "content_margin": 7
     },
@@ -1025,7 +1025,7 @@
         "attributes": ["right"],
         // "layer0.texture": "Theme - Solarized Space/Predawn/btn-group-right.png",
         "layer0.texture": "",
-        "layer0.tint": [196, 190, 185],
+        "layer0.tint": [22, 34, 41],
         "layer0.opacity": 1,
         "content_margin": 7
     },
@@ -1041,7 +1041,7 @@
         "attributes": ["left", "right"],
         // "layer0.texture": "Theme - Solarized Space/Predawn/btn-single.png",
         "layer0.texture": "",
-        "layer0.tint": [196, 190, 185],
+        "layer0.tint": [22, 34, 41],
         "layer0.opacity": 1,
         "content_margin": 7
     },
