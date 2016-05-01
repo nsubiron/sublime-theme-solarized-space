@@ -441,7 +441,7 @@
     {
         "class": "grid_layout_control",
         "border_size": 1,
-        "border_color": [4, 32, 41]
+        "border_color": [26, 40, 49]
     },
 
     {
