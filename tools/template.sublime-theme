@@ -739,11 +739,11 @@
 // FOLDER AND FILE ICONS
 //
 
-        // Hides Folder Icons if show_file_icons
+        // Hides Folder Icons if !hide_sidebar_icons
 
     {
         "class": "disclosure_button_control",
-        "settings": ["show_file_icons"],
+        "settings": ["!hide_sidebar_icons"],
         "content_margin": [0, 0],
         "layer0.opacity": 0
     },
@@ -752,14 +752,14 @@
 
     {
         "class": "icon_folder",
-        "settings": ["show_file_icons"],
+        "settings": ["!hide_sidebar_icons"],
         "content_margin": [8, 8],
         "layer0.texture": "Theme - Solarized Space/resources/folder-icon.png",
         "layer0.opacity": 1.0
     },
         {
         "class": "icon_folder",
-        "settings": ["show_file_icons"],
+        "settings": ["!hide_sidebar_icons"],
         "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
         "layer0.texture": "Theme - Solarized Space/resources/folder_open-icon.png",
         "layer0.opacity": 1.0
@@ -770,48 +770,48 @@
     {
         "class": "icon_file_type",
         // layer0.texture is filled in by code with the relevant icon name
-        "settings": ["show_file_icons"],
+        "settings": ["!hide_sidebar_icons"],
         "layer0.tint": $SideBarLabel,
         "layer0.opacity": 0.6,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_file_type",
-        "settings": ["show_file_icons"],
+        "settings": ["!hide_sidebar_icons"],
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
         "layer0.tint": $SideBarLabelHover,
         "layer0.opacity": 0.6
     },
     {
         "class": "icon_file_type",
-        "settings": ["show_file_icons"],
+        "settings": ["!hide_sidebar_icons"],
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
         "layer0.tint": $SideBarLabelSelected,
         "layer0.opacity": 0.9
     },
     {
         "class": "icon_file_type",
-        "settings": ["show_file_icons"],
+        "settings": ["!hide_sidebar_icons"],
         "parents": [{"class": "tree_row", "attributes": ["selected", "hover"]}],
         "layer0.tint": $SideBarLabelSelectedHover,
         "layer0.opacity": 0.9
     },
     {
         "class": "icon_file_type",
-        "settings": ["!show_file_icons"],
+        "settings": ["hide_sidebar_icons"],
         "content_margin": [0,0],
         "layer0.opacity": 0.0
     },
     {
         "class": "icon_folder",
-        "settings": ["!show_file_icons"],
+        "settings": ["hide_sidebar_icons"],
         "layer0.texture": "",
         "layer0.opacity": 0.0,
         "content_margin": [0,0]
     },
     {
         "class": "icon_folder_loading",
-        "settings": ["!show_file_icons"],
+        "settings": ["hide_sidebar_icons"],
         "content_margin": [0,0],
         "layer0.opacity": 0.0
     },
