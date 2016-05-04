@@ -1,0 +1,18 @@
+  v0.4.0
+
+    * This version comes with sidebar icons.
+
+      Sidebar icons are displayed by default, use the following setting
+      to hide them
+
+      {
+        "hide_sidebar_icons": true,
+      }
+
+    * A new theme based on Predawn colors is available
+
+      {
+        "theme": "Solarized Space Predawn.sublime-theme",
+      }
+
+    * Tab color is now based on the color scheme of its buffer.
