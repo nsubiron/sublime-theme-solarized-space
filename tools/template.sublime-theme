@@ -49,24 +49,24 @@
 
     // Tabs (file color overrides)
     {
-        "class": "tab_control", "attributes": ["file_light"],
+        "class": "tab_control", "attributes": ["file_light"]
         // "layer2.texture": "Theme - Default/light_unselected_tab_bg2.png",
         // "layer0.tint": [223, 221, 217],
     },
     {
-        "class": "tab_control", "attributes": ["file_medium"],
+        "class": "tab_control", "attributes": ["file_medium"]
         // "layer2.texture": "Theme - Default/medium_unselected_tab_bg.png",
         // "layer2.opacity": 0.5
     },
     {
         "class": "tab_control", "attributes": ["file_medium_dark"],
-        "tint_modifier": [255, 255, 255, 32],
+        "tint_modifier": [255, 255, 255, 32]
         // "layer2.texture": "Theme - Default/medium_dark_unselected_tab_bg2.png",
         // "layer2.opacity": 1.0
     },
     {
         "class": "tab_control", "attributes": ["file_dark"],
-        "tint_modifier": [255, 255, 255, 230],
+        "tint_modifier": [255, 255, 255, 230]
         // "layer0.texture": "Theme - Default/dark_tab_mask3.png",
         // "layer2.texture": "Theme - Default/dark_unselected_tab_bg2.png",
         // "layer2.opacity": 1.0
@@ -79,24 +79,24 @@
         "layer0.opacity": 1.0
     },
     {
-        "class": "tab_control", "attributes": ["selected", "file_light"],
+        "class": "tab_control", "attributes": ["selected", "file_light"]
         // "layer2.texture": "Theme - Default/light_selected_tab_bg.png",
         // "layer2.opacity": 0.8
     },
     {
-        "class": "tab_control", "attributes": ["selected", "file_medium"],
+        "class": "tab_control", "attributes": ["selected", "file_medium"]
         // "layer2.texture": "Theme - Default/medium_selected_tab_bg.png",
         // "layer2.opacity": 0.5
     },
     {
         "class": "tab_control", "attributes": ["selected", "file_medium_dark"],
-        "tint_modifier": [0, 0, 0, 0],
+        "tint_modifier": [0, 0, 0, 0]
         // "layer2.texture": "Theme - Default/medium_dark_selected_tab_bg.png",
         // "layer2.opacity": 0.7
     },
     {
         "class": "tab_control", "attributes": ["selected", "file_dark"],
-        "tint_modifier": [0, 0, 0, 0],
+        "tint_modifier": [0, 0, 0, 0]
         // "layer2.texture": "Theme - Default/dark_selected_tab_bg.png",
         // "layer2.opacity": 1,
         // "layer0.opacity": 1.0
@@ -447,7 +447,7 @@
     {
         "class": "progress_bar_control",
         "layer0.tint": $ProgressBar,
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 1.0
     },
 
     {
