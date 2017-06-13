@@ -561,7 +561,7 @@
     // Status bar switch panels button
     {
         "class": "panel_button_control",
-        "layer0.texture": "Theme - Default/panels.png",
+        "layer0.texture": $PanelButtonControlTexture,
         "layer0.opacity": 0.7,
         "layer0.tint": $StatusBarLabel,
         "content_margin": [12, 8]
